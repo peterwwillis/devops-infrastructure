@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "eiq-infrastructure-helm-scripts"
+version = "0.1"
+description = "CLI tools for managing helm."
+authors = ["NextEra Mobility"]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+click = "^8.1.3"
+dictdiffer = "^0.9.0"
+dataclasses = "^0.6.0"
+PyYAML= "^6.0.1"
+requests = "^2.28.2"
+
+[tool.poetry.group.dev.dependencies]
+bandit = "^1.7.4"
+mypy = "^1.5.1"
+flake8 = "^6.0.0"
+isort = "^5.10.1"
+black = "^22.10.0"
+
+
+[build-system]
+requires = ["poetry-core ~= 1.2.2"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 90
+target-version = ['py310']
+preview = true
+
+[tool.isort]
+profile = "black"
+line_length = 90
+lines_between_types = 1
+lines_after_imports = 2
+include_trailing_comma = true
+multi_line_output = 3
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "EIQ", "FIRSTPARTY", "LOCALFOLDER"]
+known_eiq = []
