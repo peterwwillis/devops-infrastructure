@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "bin"
+version = "0.1.0"
+description = "Scripts for automating infrastructure management"
+authors = ["Peter W <31324861+peterwwillis@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.31.0"
+python-dateutil = "^2.9.0.post0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
